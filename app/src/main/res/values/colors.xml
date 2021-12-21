@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="card_background">#1c1c1c</color>
+    <color name="white">#ffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="nodeSliderShadow">#0D3E360E</color>
+    <color name="BPBlue">#2e5bff</color>
+    <color name="BPYellow">#fedc36</color>
+    <color name="BPGray9">#303239</color>
+    <color name="BPGray8">#484b55</color>
+
 </resources>

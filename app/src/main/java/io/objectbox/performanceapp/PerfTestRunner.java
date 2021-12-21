@@ -40,7 +40,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PerfTestRunner {
 
-    interface Callback {
+    public interface Callback {
         void done();
     }
 

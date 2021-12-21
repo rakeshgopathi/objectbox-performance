@@ -2,6 +2,7 @@
 <manifest package="io.objectbox.performanceapp"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
     <!-- Note: We do not request the permission on Android 6+ - user has to add it manually using App Info-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -12,13 +13,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.GlassMainActivity"
             android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voice_trigger"
+                />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
